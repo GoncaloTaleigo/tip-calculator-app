@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+   
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+}
+
+
+p{
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: hsl(183, 100%, 15%);
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*Valores introduzidos*/
+.values{
+    height: 30px;
+    border: solid 2px hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);
+    padding:0 5px;
+    text-align: right;
+    font-size: 24px;
+    color:  hsl(183, 100%, 15%);
+    font-weight: bold;
+    
+}
+
+
+.values:focus{
+    outline: none;
+    border-color:hsl(172, 67%, 45%);
+}
+
+
+
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+/*Valor da conta*/
+.section-1>.values{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 8px;
+
+}
+
+.section-1>.values.error{
+    border: 1px solid red;
+    color:red
+}
+
+
+
+
+.tip-percentage {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/*Numero de pessoas*/
+.tip-percentage>input.values{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 8px;
+
+}
+
+
+
+.tip-values {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+
+.tip-values button,.tip-values input[type="text"] {
+    width: 110px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+}
+
+.tip-values button.clicked{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+
+
+
+
+.tip-values button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%) ;
+}
+
+
+.tip-values input[type="text"]{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(184, 14%, 56%);
+}
+
+.tip-values input[type="text"]:focus::placeholder{
+   
+    color: transparent;
+}
+
+
+.tip-values input[type="text"].error{
+    border:solid 1px red;
+    color: red;
+    
+}
+
+#people.error{
+    border: 1px solid red;
+    color:red
+}
+
+
+
+
+
+
+
+
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-clip: content-box;
+    background-color: hsl(183, 100%, 15%);
+
+
+}
+
+
+
+
+
+.section-2 input {
+    width: 80%;
+    align-self: center;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    height: 30px;
+    border:none;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.amount,
+.total {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.amount-person p:nth-child(1),.total-person p:nth-child(1){
+    color:  white;
+}
+
+
+.amount-person p:nth-child(2),.total-person p:nth-child(2){
+    color:  hsl(184, 14%, 56%);
+}
+
+.amount span,.total span{
+    color: hsl(172, 67%, 45%);
+}
+
+
+
+
+
+
+
+
+@media(min-width:1440px){
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 700px;
+        gap: 30px;
+    }
+
+
+  .tip-values{
+    gap:2px
+  }
+}
